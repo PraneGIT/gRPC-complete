@@ -14,7 +14,7 @@ service greet_service{
     rpc SayHelloBidirectionalStreaming (stream HelloRequest) returns (stream HelloResponse);
 }
 
-message NoParam{};
+message NoParam {};
 
 message HelloResponse{
     string message=1;
