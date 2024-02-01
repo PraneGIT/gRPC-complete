@@ -20,6 +20,12 @@ func main() {
 
 	client := pb.NewGreetServiceClient(conn)
 
+	names := &pb.NameList{
+		Names: []string{"praneki", "pranjal", "jha"},
+	}
+
 	// Call the remote method
-	callSayHello(client)
+	// callSayHello(client)
+
+	callSayHelloServerStreaming(client, names)
 }
