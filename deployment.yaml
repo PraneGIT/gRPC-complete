@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-app
+  template:
+    metadata:
+      labels:
+        app: grpc-app
+    spec:
+      containers:
+      - name: grpc-app
+        image: praneki/grpc-app:latest
+        ports:
+        - containerPort: 8080
