@@ -32,4 +32,4 @@ COPY --from=builder /app/client/main ./client/
 EXPOSE 8080
 
 # Command to run the server and client
-CMD ["./server/main"]  
+CMD ./server/main & ./client/main 
